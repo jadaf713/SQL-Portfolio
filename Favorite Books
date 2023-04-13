@@ -1,0 +1,13 @@
+# SQL-Projects
+CREATE TABLE favoritebooks (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO favoritebooks VALUES (1, "daisy jones & the six", 5);
+INSERT INTO favoritebooks VALUES (2, "normal people", 4);
+INSERT INTO favoritebooks VALUES (3, "the spanish love deception", 5);
+INSERT INTO favoritebooks VALUES (4, "beach read", 5);
+INSERT INTO favoritebooks VALUES (5, "love and other words", 5);
+INSERT INTO favoritebooks VALUES (6, "it happened one summer", 5);
+INSERT INTO favoritebooks VALUES (7, "hook line & sinker", 5);
+INSERT INTO favoritebooks VALUES (8, "atomic habits", 5);
+
+SELECT * FROM favoritebooks;
