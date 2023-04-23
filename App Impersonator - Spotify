@@ -1,0 +1,43 @@
+/*Think about your favorite apps, and pick one that stores your data- like a game that stores scores, an app that lets you post updates, etc. Now in this project, 
+you're going to imagine that the app stores your data in a SQL database (which is pretty likely!), and write SQL statements that might look like their own SQL.*/
+
+CREATE TABLE Jada_Spotify (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    playlist_name TEXT,
+    song_title TEXT,
+    artist TEXT,
+    album TEXT,
+    date_added TEXT,
+    duration TEXT);
+
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "What The Hell", "Avril Lavigne", "Goodbye Lullaby", "Aug 26 2022", "3:41");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "If I Die Young", "The Band Perry", "The Band Perry", "Aug 26 2022", "3:43");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Stacy's Mom", "Fountains of Wayne", "Welcome Interstate Managers", "Aug 26 2022","3:18");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Super Bass", "Nicki Minaj", "Pink Friday", "Aug 26 2022", "3:20");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Not Over You", "Gavin Degraw", "Sweeter", "Aug 26 2022", "3:39");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "I Do", "Colbie Caillat", "All of You", "Aug 26 2022", "2:53");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Hey There Delilah", "Plain White T's", "All That We Needed", "Aug 26 2022", "3:53");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Stereo Hearts", "Gym Class Heroes feat. Adam Levine", "The Papercut Chronicles II", "Aug 26 2022", "3:31");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Airplanes", "B.o.B feat. Hayley Williams", "B.o.B Presents: The Adventures of Bobby Ray", "Aug 26 2022", "3.00");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Ho Hey", "The Lumineers", "The Lumineers", "Aug 26 2022", "2:43");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "The Man Who Can't Be Moved", "The Script", "The Script", "Aug 26 2022", "4:01");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "King of Anything", "Sara Bareilles", "Kaleidoscope Heart", "Aug 26 2022", "4:01");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("songs that trigger my personal nostalgia", "Last Friday Night (T.G.I.F.)", "Katy Perry", "Teenage Dream", "Aug 26 2022", "3:51");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("reset & clean", "Best Song Ever", "One Direction", "Midnight Memories", "Mar 22 2023", "3:20");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("reset & clean", "Come On Eileen", "Dexys Midnight Runners", "Too Rye Ay", "Mar 22 2023", "4:47");
+INSERT INTO Jada_Spotify (playlist_name, song_title, artist, album, date_added, duration) VALUES ("reset & clean", "Be My Baby", "Ariana Grande", "My Everything", "Mar 22 2023", "3:37");
+
+SELECT * FROM Jada_Spotify;
+
+/*Move a song from the playlist "songs that trigger my personal nostalgia" to the playlist "reset & clean".*/
+UPDATE Jada_Spotify SET playlist_name = "reset & clean" WHERE id = 13;
+
+SELECT * FROM Jada_Spotify;
+
+/*Delete a song from the playlist "songs that trigger my personal nostalgia".*/
+
+DELETE FROM Jada_Spotify WHERE id = 10;
+
+SELECT * FROM Jada_Spotify;
+
+
