@@ -1,0 +1,44 @@
+/*In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create
+nice human readable lists.*/
+
+CREATE TABLE singers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    hometown INTEGER);
+
+INSERT INTO singers (fullname, hometown) VALUES ("Harry Styles", "Holmes Chapel");
+INSERT INTO singers (fullname, hometown) VALUES ("Ariana Grande","Boca Raton");
+INSERT INTO singers (fullname, hometown) VALUES ("Jesse Rutherford","Newbury Park");
+INSERT INTO singers (fullname, hometown) VALUES ("Matty Healy","Newcastle");
+INSERT INTO singers (fullname, hometown) VALUES ("Dominic Fike","Naples");
+INSERT INTO singers (fullname, hometown) VALUES ("Britney Spears","Kentwood");
+INSERT INTO singers (fullname, hometown) VALUES ("Billie Eilish","Highland Park");
+INSERT INTO singers (fullname, hometown) VALUES ("SZA","Maplewood");
+INSERT INTO singers (fullname, hometown) VALUES ("Olivia Rodrigo","Temecula");
+
+
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    release_year INTEGER);
+
+INSERT INTO songs (title, release_year) VALUES ("Only Angel", "2017");
+INSERT INTO songs (title, release_year) VALUES ("In My Head", "2019");
+INSERT INTO songs (title, release_year) VALUES ("Sweater Weather", "2012");
+INSERT INTO songs (title, release_year) VALUES ("Chocolate", "2013");
+INSERT INTO songs (title, release_year) VALUES ("Babydoll", "2018");
+INSERT INTO songs (title, release_year) VALUES ("Overprotected", "2001");
+INSERT INTO songs (title, release_year) VALUES ("Happier Than Ever","2021");
+INSERT INTO songs (title, release_year) VALUES ("Snooze", "2022");
+INSERT INTO songs (title, release_year) VALUES ("Enough For You", "2021");
+
+SELECT * FROM singers;
+SELECT * FROM songs;
+
+/*Join the 2 tables to show the singer's name next to the song they sing along with the year the song was released.*/
+
+SELECT singers.fullname, songs.title, songs.release_year
+FROM singers
+JOIN songs
+ON singers.id = songs.id
+GROUP BY release_year;
